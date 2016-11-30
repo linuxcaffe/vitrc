@@ -1,8 +1,8 @@
 ### vit rc file
 GistID: e9364360044f42f4cc9f
 
-map \mn=:!wr needs 
-#map \cn=:!wr tasknote %TASKID<Return>
+# map \mn=:!wr needs 
+# map \cn=:!wr tasknote %TASKID<Return>
 #       When  Ctrl  +  n  is pressed, runs the command 'tasknote <ID>', where <ID> is the ID of the task that is currently selected in
 #       VIT.
 
@@ -16,7 +16,6 @@ map <Left>=:!wr task $(task _get %TASKID.parent) edit<Return>
        When the left arrow key is pressed, edits the parent of a recurring task (do not use on non-recurring task).
 
 ## f-keys
-# map 265=man vit
 map <F1>=:h<Return>
 map <F2>=:blocking<Return>
 map <F3>=:waiting<Return>
@@ -61,7 +60,6 @@ map <Insert>=a
 map <Del>=D
 
 map C=:!w task calendar<Return>
-# map -w k=cat ~/.task/vit.keyref.txt
 
 # dashboard
 map `=:!w task logo ; fortune ; figlet Taskwarrior ; echo '     Taskwarrior is a command-line todo list manager' ; date<Return>
@@ -70,6 +68,6 @@ map ,=:! vi ~/vimwiki.txt<Return>
 
 ## external
 map o=:!w taskopen %TASKID<Return>
-map R=:! trev.pl %TASKARGS list<Return>
+# map R=:! trev.pl %TASKARGS list<Return>
 #^^^^ needs <filter> 
-map \ct=:!wr ~/.task/scripts/tw-tod-sh/ToD.sh  
+# map \ct=:!wr ~/.task/scripts/tw-tod-sh/ToD.sh  
